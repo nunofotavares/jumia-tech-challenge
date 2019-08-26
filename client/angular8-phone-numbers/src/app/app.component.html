@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  
+</nav>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Customer List</h2>
+    </div>
+    <div fxLayout fxLayoutAlign="center center">
+      <mat-form-field fxFlex="40%">
+        <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+    <div class="table-responsive mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+    
+        <!-- ID Column -->
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+    
+        <!-- Employee Name Column -->
+        <ng-container matColumnDef="Country">
+          <th mat-header-cell *matHeaderCellDef>Country </th>
+          <td mat-cell *matCellDef="let row"> {{row.country}} </td>
+        </ng-container>
+    
+        <!-- Color Column -->
+        <ng-container matColumnDef="Country Code">
+          <th mat-header-cell *matHeaderCellDef> Country Code </th>
+          <td mat-cell *matCellDef="let row"> {{row.countryCode}} </td>
+        </ng-container>
+    
+        <!-- Hours Column -->
+        <ng-container matColumnDef="Phone">
+          <th mat-header-cell *matHeaderCellDef>Phone </th>
+          <td mat-cell *matCellDef="let row"> {{row.phone}} </td>      
+        </ng-container>
+        
+        <ng-container matColumnDef="State">
+          <th mat-header-cell *matHeaderCellDef>State </th>
+          <td mat-cell *matCellDef="let row"> {{row.state}} </td>      
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <span>All Rights Reserved 2019 @Nuno Tavares</span>
+  </div>
+</footer>
+
