@@ -16,8 +16,8 @@ public class DBConfig {
 	public static List<Customer> dbConnect() {
 		
 		Connection connection = null;
-	    try
-	    {
+		
+	    try{
 	      // create a database connection
 	      connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
 	      Statement statement = connection.createStatement();
