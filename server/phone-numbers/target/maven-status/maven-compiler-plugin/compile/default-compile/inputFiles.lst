@@ -1,0 +1,7 @@
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/model/Customer.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/controller/CustomerController.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/exception/ErrorDetails.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/exception/GlobalExceptionHandler.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/config/DBConfig.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/exception/ResourceNotFoundException.java
+/home/nuno/Downloads/phone-numbers/src/main/java/com/nuno/phonenumbers/PhoneNumbersApplication.java
