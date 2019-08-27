@@ -1,7 +1,7 @@
-FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.nuno.phonenumbers.PhoneNumbersApplication"]
+# Alpine Linux with OpenJDK JRE
+FROM openjdk:8-jre-alpine
+# copy Jar into image
+COPY target/phone-numbers-0.0.1-SNAPSHOT.jar /app.jar
+COPY sample.db /sample.db
+# run application with this command line 
+CMD ["/usr/bin/java", "-jar", "/app.jar"]
