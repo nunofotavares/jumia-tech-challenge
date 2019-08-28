@@ -2,10 +2,6 @@ package com.nuno.phonenumbers.model;
 
 import java.util.regex.Pattern;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 public class Customer {
 
@@ -29,8 +25,7 @@ public class Customer {
 		setCountryCode("+" + splittedPhone[0].replaceAll("[^a-zA-Z0-9]", ""));
 		setCountry(this.countryCode);
 	}
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public long getId() {
 		return id;
 	}
@@ -39,7 +34,6 @@ public class Customer {
 		this.id = id;
 	}
 	
-	@Column(name = "name")
 	public String getName() {
 		return name;
 	}
@@ -48,7 +42,6 @@ public class Customer {
 		this.name = name;
 	}
 	
-	@Column(name = "phone")
 	public String getPhone() {
 		return phone;
 	}
@@ -57,7 +50,6 @@ public class Customer {
 		this.phone = phone;
 	}
 	
-	@Column(name = "country_code")
 	public String getCountryCode() {
 		return countryCode;
 	}
@@ -66,7 +58,6 @@ public class Customer {
 		this.countryCode = countryCode;
 	}
 	
-	@Column(name = "country")
 	public String getCountry() {
 		return country;
 	}
@@ -82,7 +73,6 @@ public class Customer {
 		}
 	}
 	
-	@Column(name = "state")
 	public String getState() {
 		return state;
 	}

@@ -1,5 +1,6 @@
 package com.nuno.phonenumbers.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +15,13 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class CustomerController {
 
+	@Autowired
+	private DBConfig config;
+	
     @GetMapping("/customers")
     public List<Customer> getAllEmployees() {
     	
-        return  DBConfig.getCustomers();
+        return  config.getCustomers();
         
     }
     

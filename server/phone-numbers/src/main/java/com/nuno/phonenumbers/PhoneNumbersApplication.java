@@ -8,10 +8,11 @@ import com.nuno.phonenumbers.config.DBConfig;
 @SpringBootApplication
 public class PhoneNumbersApplication {
 
-	public static void main(String[] args){
-		
+	public static void main(String[] args){		
 		DBConfig.dbConnect();
 		SpringApplication.run(PhoneNumbersApplication.class, args);
 	}
+
+	
 
 }
